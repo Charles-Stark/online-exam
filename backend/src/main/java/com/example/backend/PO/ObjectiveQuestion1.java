@@ -9,13 +9,14 @@ import org.springframework.stereotype.Component;
 @EnableConfigurationProperties
 @TableName(value = "objective_question1")
 @Component
-public class test {
+public class ObjectiveQuestion1 {
     private int id;
-    private long paperid;
-    private String course;
-    private String madedate;
-    private int limitedtime;
-    private long teacherid;
-    private long testid;
-    private long mader;
+    private Long questionid;
+    private String questionname;
+    private String questioninfo;
+    private String questionanswer;
+    private String choice_a;
+    private String choice_b;
+    private String choice_c;
+    private String choice_d;
 }

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @EnableConfigurationProperties
 @TableName(value = "paper")
 @Component
-public class paper {
+public class Paper {
     private int id;
     private Long testid;
     private String testlevel;

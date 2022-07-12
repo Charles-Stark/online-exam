@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @EnableConfigurationProperties
 @TableName(value = "user")
 @Component
-public class user {
+public class User {
     private int id;
     private Long userid;
     private String username;

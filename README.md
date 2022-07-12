@@ -15,7 +15,7 @@ doc文件夹用于存放文档数据。
 
 Controller文件夹中的内容用于接收前端发送的请求（GET/POST），接收请求后可调用Service文件夹中的服务层以获取需要的数据并返回。
 
-PO文件夹中存放与数据库中数据表对应的Java类（如User、Test等）。Util文件夹用于存放自己编写的工具类。
+PO文件夹中存放与数据库中数据表对应的Java类（如User、Test等），类名采用驼峰命名法（注意大小写）。Util文件夹用于存放自己编写的工具类。
 
 数据库操作采用mybatis。resources文件夹中的mapper文件夹用于存放mybatis的映射文件（xml），src中的mapper文件夹用于存放mybatis的Java接口。
 
