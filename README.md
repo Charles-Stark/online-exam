@@ -4,6 +4,8 @@
 数据库相关的请存入sql文件夹，新建一个.sql格式的文件。
 
 其中all.sql文件经整理可成功运行。
+## 文档
+doc文件夹用于存放文档数据。
 ## 后端backend
 后端Spring Boot项目为backend文件夹。
 
