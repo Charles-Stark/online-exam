@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ba5c468-6825-421a-9a53-0ddd4e46cf62" name="变更" comment="Update mybatis-config.xml">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql/init.sql" afterDir="false" />
+    <list default="true" id="6ba5c468-6825-421a-9a53-0ddd4e46cf62" name="变更" comment="Add init.sql">
+      <change afterPath="$PROJECT_DIR$/sql/all.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657609487039</updated>
       <workItem from="1657609488068" duration="948000" />
-      <workItem from="1657610442993" duration="2082000" />
+      <workItem from="1657610442993" duration="2775000" />
     </task>
     <task id="LOCAL-00001" summary="Update POM.xml">
       <created>1657610603164</created>
@@ -82,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657610898226</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add init.sql">
+      <created>1657612695460</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657612695460</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +108,7 @@
     <MESSAGE value="Update POM.xml" />
     <MESSAGE value="Update mybatis-config.xml" />
     <MESSAGE value="Add Dir sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Dir sql" />
+    <MESSAGE value="Add init.sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add init.sql" />
   </component>
 </project>
