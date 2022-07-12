@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ba5c468-6825-421a-9a53-0ddd4e46cf62" name="变更" comment="Update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/数据库创建代码.docx" beforeDir="false" afterPath="$PROJECT_DIR$/sql/数据库创建代码.docx" afterDir="false" />
+    <list default="true" id="6ba5c468-6825-421a-9a53-0ddd4e46cf62" name="变更" comment="update">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/PO/objective_question1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/PO/objective_question2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/PO/paper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/PO/subjective_question.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/PO/user.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +32,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/charles_stark/Study/java/online-exam/backend/src/main/resources",
+    "last_opened_file_path": "/Users/charles_stark/Study/java/online-exam/backend/src/main/java/com/example/backend/PO",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -49,6 +52,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/src/main/java/com/example/backend/PO" />
       <recent name="$PROJECT_DIR$/backend/src/main/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -73,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657609487039</updated>
       <workItem from="1657609488068" duration="948000" />
-      <workItem from="1657610442993" duration="5864000" />
+      <workItem from="1657610442993" duration="6171000" />
     </task>
     <task id="LOCAL-00001" summary="Update POM.xml">
       <created>1657610603164</created>
@@ -110,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657614772283</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="在README中添加了开发说明">
+      <created>1657616361529</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657616361529</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +145,9 @@
     <MESSAGE value="Add init.sql" />
     <MESSAGE value="Add all.sql" />
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="在README中添加了开发说明" />
+    <MESSAGE value="add PO" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
