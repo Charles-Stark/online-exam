@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ba5c468-6825-421a-9a53-0ddd4e46cf62" name="变更" comment="Add init.sql">
-      <change afterPath="$PROJECT_DIR$/sql/all.sql" afterDir="false" />
+    <list default="true" id="6ba5c468-6825-421a-9a53-0ddd4e46cf62" name="变更" comment="Add all.sql">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/mybatis-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +30,12 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/charles_stark/Study/java/online-exam",
+    "last_opened_file_path": "/Users/charles_stark/Study/java/online-exam/backend/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.web.browsers",
+    "settings.editor.selected.configurable": "database.query.execution",
     "spring.configuration.checksum": "b43fdd98b1fd705ae4c3a10cf25aad8a"
   },
   "keyToStringList": {
@@ -46,6 +47,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/src/main/resources" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="backend" />
@@ -64,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657609487039</updated>
       <workItem from="1657609488068" duration="948000" />
-      <workItem from="1657610442993" duration="2775000" />
+      <workItem from="1657610442993" duration="4292000" />
     </task>
     <task id="LOCAL-00001" summary="Update POM.xml">
       <created>1657610603164</created>
@@ -87,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657612695460</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add all.sql">
+      <created>1657613439087</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657613439087</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +122,7 @@
     <MESSAGE value="Update mybatis-config.xml" />
     <MESSAGE value="Add Dir sql" />
     <MESSAGE value="Add init.sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add init.sql" />
+    <MESSAGE value="Add all.sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add all.sql" />
   </component>
 </project>
