@@ -1,6 +1,7 @@
-package com.mt.mapper;
+package com.example.backend.mapper;
 
 
+import com.example.backend.PO.Paper;
 import com.mt.domain.Objective_question1;
 import com.mt.domain.Paper;
 import org.apache.ibatis.annotations.Mapper;
