@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ba5c468-6825-421a-9a53-0ddd4e46cf62" name="变更" comment="update">
+    <list default="true" id="6ba5c468-6825-421a-9a53-0ddd4e46cf62" name="变更" comment="add mybatis-plus mapper scan">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/BackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/BackendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/PO/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/PO/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/all.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/all.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +30,7 @@
     </option>
     <option name="myId2Visible">
       <map>
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
@@ -125,7 +125,7 @@
       <workItem from="1657609488068" duration="948000" />
       <workItem from="1657610442993" duration="10002000" />
       <workItem from="1657626665215" duration="249000" />
-      <workItem from="1657626929518" duration="3253000" />
+      <workItem from="1657626929518" duration="3719000" />
     </task>
     <task id="LOCAL-00001" summary="Update POM.xml">
       <created>1657610603164</created>
@@ -218,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657628052182</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add mybatis-plus mapper scan">
+      <created>1657683827855</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1657683827855</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +254,7 @@
     <MESSAGE value="update PO" />
     <MESSAGE value="add Mapper" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="add mybatis-plus mapper scan" />
+    <option name="LAST_COMMIT_MESSAGE" value="add mybatis-plus mapper scan" />
   </component>
 </project>

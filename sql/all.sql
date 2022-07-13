@@ -45,7 +45,7 @@ Questionanswer=题目答案（不确定要不要，可以为空）
 CREATE TABLE `testsystem`.`paper`
 (
     `id`              INT         NOT NULL AUTO_INCREMENT,
-    `testid`         BIGINT(20)  NOT NULL,
+    `testid`          BIGINT(20)  NOT NULL,
     `testlevel`       VARCHAR(10) NOT NULL,
     `testcourse`      VARCHAR(20) NOT NULL,
     `questionteacher` VARCHAR(20) NOT NULL,
@@ -495,3 +495,21 @@ ALTER TABLE `testsystem`.`test`
 # Paper表修改testid为paperid
 ALTER TABLE `testsystem`.`paper`
     CHANGE COLUMN `testid` `paperid` BIGINT NOT NULL;
+
+
+# 所以数据表中id字段自增取消
+ALTER TABLE `testsystem`.`course`
+    CHANGE COLUMN `id` `id` INT NOT NULL;
+ALTER TABLE `testsystem`.`objective_question1`
+    CHANGE COLUMN `id` `id` INT NOT NULL;
+ALTER TABLE `testsystem`.`objective_question2`
+    CHANGE COLUMN `id` `id` INT NOT NULL;
+ALTER TABLE `testsystem`.`paper`
+    CHANGE COLUMN `id` `id` INT NOT NULL;
+ALTER TABLE `testsystem`.`subjective_question`
+    CHANGE COLUMN `id` `id` INT NOT NULL;
+ALTER TABLE `testsystem`.`test`
+    CHANGE COLUMN `id` `id` INT NOT NULL;
+ALTER TABLE `testsystem`.`user`
+    CHANGE COLUMN `id` `id` INT NOT NULL;
+
