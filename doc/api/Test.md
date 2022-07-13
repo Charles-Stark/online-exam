@@ -1,22 +1,24 @@
----
-
 # 教考分离
 
 > v1.0.0
 
-# 考试 v1
+# 考试 v1/Test
 
-## GET 获取考试详情
+## GET 组卷
 
-GET /api/v1/exam/detail/{id}
+GET /api/v1/exam/generate
 
-获取考试详情
+组卷
 
 ### 请求参数
 
 |名称|位置|类型|必选|说明|
 |---|---|---|---|---|
-|id|path|integer| 是 |none|
+|objective_question1|query|array| 是 |选择题id数组，若无则为空数组|
+|objective_question2|query|array| 是 |判断题id数组，若无则为空数组|
+|subjective_question|query|array| 是 |主观题id数组，若无则为空数组|
+|questionteacher|query|string| 是 |出卷老师|
+|testcourse|query|string| 是 |试卷科目|
 
 > 返回示例
 
@@ -25,22 +27,24 @@ GET /api/v1/exam/detail/{id}
 ```json
 {
   "code": 0,
-  "msg": "获取考试详情成功",
+  "msg": "组卷成功",
   "data": {
     "id": 1,
     "paperid": 1,
-    "course": "面向对象程序设计",
-    "madedate": "2022-07-12 11:01:03",
-    "limitedtime": 60,
-    "teacherid": 12
+    "testlevel": "",
+    "testcourse": "语文",
+    "questiontescher": "12",
+    "question": "1001,1002,1020;2001,1004,2301,3032;1205,1206",
+    "questiontype": "选择题,判断题,填空题",
+    "questionanswer": ""
   }
 }
 ```
 
 ```json
 {
-  "code": 0,
-  "msg": "获取考试详情失败",
+  "code": -1,
+  "msg": "组卷失败",
   "data": null
 }
 ```
@@ -173,11 +177,11 @@ teacherid: 0
 
 ### 返回数据结构
 
-## GET 删除考试
+## GET 获取考试详情
 
-GET /api/v1/exam/delete/{id}
+GET /api/v1/exam/detail/{id}
 
-删除考试
+获取考试详情
 
 ### 请求参数
 
@@ -192,15 +196,22 @@ GET /api/v1/exam/delete/{id}
 ```json
 {
   "code": 0,
-  "msg": "删除考试成功",
-  "data": null
+  "msg": "获取考试详情成功",
+  "data": {
+    "id": 1,
+    "paperid": 1,
+    "course": "面向对象程序设计",
+    "madedate": "2022-07-12 11:01:03",
+    "limitedtime": 60,
+    "teacherid": 12
+  }
 }
 ```
 
 ```json
 {
-  "code": -1,
-  "msg": "删除考试失败",
+  "code": 0,
+  "msg": "获取考试详情失败",
   "data": null
 }
 ```
@@ -275,3 +286,45 @@ teacherid: 0
 |200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
 
 ### 返回数据结构
+
+## GET 删除考试
+
+GET /api/v1/exam/delete/{id}
+
+删除考试
+
+### 请求参数
+
+|名称|位置|类型|必选|说明|
+|---|---|---|---|---|
+|id|path|integer| 是 |none|
+
+> 返回示例
+
+> 成功
+
+```json
+{
+  "code": 0,
+  "msg": "删除考试成功",
+  "data": null
+}
+```
+
+```json
+{
+  "code": -1,
+  "msg": "删除考试失败",
+  "data": null
+}
+```
+
+### 返回结果
+
+|状态码|状态码含义|说明|数据模型|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+
+### 返回数据结构
+
+
