@@ -6,7 +6,6 @@ import com.example.backend.mapper.TestMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -21,7 +20,7 @@ public class TestController {
     ResultVo<List<Test>> getAllTest(@RequestParam(required = false) Map map) {
 
         try {
-            List<Test> testList;
+            List testList;
             if (map != null) {
                 testList = testMapper.selectByMap(map);
             } else {
@@ -36,15 +35,21 @@ public class TestController {
     }
 
 
-    @GetMapping("/detail/{id}")
-    ResultVo<Test> getTestDetail(@PathVariable String id) {
+    @GetMapping("/detail/{testid}")
+    ResultVo<Test> getTestDetail(@PathVariable String testid) {
 
         try {
-            Test test = testMapper.selectById(id);
+            Test test = testMapper.selectById(testid);
             return new ResultVo<>(0, "获取考试详情成功", test);
         } catch (Exception e) {
             e.printStackTrace();
             return new ResultVo<>(-1, "获取考试详情失败", null);
         }
+    }
+
+
+    @PostMapping("update")
+    ResultVo updateTest() {
+        return null;
     }
 }
