@@ -1,12 +1,12 @@
-package com.mt.mapper;
+package com.example.backend.mapper;
 
-import com.mt.domain.Objective_question2;
+import com.example.backend.PO.ObjectiveQuestion2;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
 @Mapper
 public interface OB2mapper {
-    public List<Objective_question2> selectQuestionByCourseName(String courseName);
-    public Objective_question2 selectQuestionbyQuestionid(Long questionid);
+    public List<ObjectiveQuestion2> selectQuestionByCourseName(String courseName);
+    public ObjectiveQuestion2 selectQuestionbyQuestionid(Long questionid);
 }

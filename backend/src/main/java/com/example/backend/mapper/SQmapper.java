@@ -1,13 +1,13 @@
-package com.mt.mapper;
+package com.example.backend.mapper;
 
 
-import com.mt.domain.Subjective_question;
+import com.example.backend.PO.SubjectiveQuestion;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
 @Mapper
 public interface SQmapper {
-    public List<Subjective_question> selectQuestionByCourseName(String courseName);
-    public Subjective_question selectQuestionbyQuestionid(Long questionid);
+    public List<SubjectiveQuestion> selectQuestionByCourseName(String courseName);
+    public SubjectiveQuestion selectQuestionbyQuestionid(Long questionid);
 }
