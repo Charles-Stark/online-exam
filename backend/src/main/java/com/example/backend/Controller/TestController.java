@@ -34,4 +34,17 @@ public class TestController {
             return new ResultVo<>(-1, "获取考试失败", null);
         }
     }
+
+
+    @GetMapping("/detail/{id}")
+    ResultVo<Test> getTestDetail(@PathVariable String id) {
+
+        try {
+            Test test = testMapper.selectById(id);
+            return new ResultVo<>(0, "获取考试详情成功", test);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResultVo<>(-1, "获取考试详情失败", null);
+        }
+    }
 }

@@ -58,7 +58,7 @@ GET /api/v1/exam/question/detail/{id}
 
 ```json
 {
-  "code": 0,
+  "code": -1,
   "msg": "获取题目详情失败",
   "data": null
 }
