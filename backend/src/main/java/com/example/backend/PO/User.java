@@ -1,5 +1,6 @@
 package com.example.backend.PO;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -18,6 +19,7 @@ public class User {
     private String phone;
     private String specialty;       //专业
     private String faculties;       //院系
+    @TableField("class")
     private String UClass;
     private String type;
 }
