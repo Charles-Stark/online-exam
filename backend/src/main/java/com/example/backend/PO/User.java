@@ -21,5 +21,5 @@ public class User {
     private String faculties;       //院系
     @TableField("class")
     private String UClass;
-    private String type;
+    private int type;
 }
