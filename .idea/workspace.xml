@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ba5c468-6825-421a-9a53-0ddd4e46cf62" name="变更" comment="Update api doc">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/Controller/PaperController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/Controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/Controller/UserController.java" afterDir="false" />
+    <list default="true" id="6ba5c468-6825-421a-9a53-0ddd4e46cf62" name="变更" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/mapper/PaperMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/mapper/PaperMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/mapper/SQMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/mapper/SQMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/Test.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +129,7 @@
       <workItem from="1657610442993" duration="10002000" />
       <workItem from="1657626665215" duration="249000" />
       <workItem from="1657626929518" duration="8224000" />
-      <workItem from="1657694259225" duration="846000" />
+      <workItem from="1657694259225" duration="1331000" />
     </task>
     <task id="LOCAL-00001" summary="Update POM.xml">
       <created>1657610603164</created>
@@ -261,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657694407522</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Update">
+      <created>1657695152763</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1657695152763</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +287,6 @@
     <MESSAGE value="Add Dir sql" />
     <MESSAGE value="Add init.sql" />
     <MESSAGE value="Add all.sql" />
-    <MESSAGE value="Update" />
     <MESSAGE value="在README中添加了开发说明" />
     <MESSAGE value="add PO" />
     <MESSAGE value="update PO" />
@@ -294,6 +296,7 @@
     <MESSAGE value="Update all.sql" />
     <MESSAGE value="Add ResultVo" />
     <MESSAGE value="Update api doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update api doc" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
 </project>
