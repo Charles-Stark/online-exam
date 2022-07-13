@@ -1,10 +1,10 @@
 package com.example.backend.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.backend.PO.ObjectiveQuestion2;
+import com.example.backend.PO.Test;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface OB2MapperPlus extends BaseMapper<ObjectiveQuestion2> {
+public interface TestMapper extends BaseMapper<Test> {
 
 }

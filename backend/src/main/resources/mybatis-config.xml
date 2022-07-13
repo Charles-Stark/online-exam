@@ -11,7 +11,7 @@
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/testsystem?characterEncoding=utf8"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf8"/>
                 <property name="username" value="root"/>
                 <property name="password" value="918spyder"/>
             </dataSource>
@@ -19,6 +19,5 @@
     </environments>
 
     <mappers>
-
     </mappers>
 </configuration>

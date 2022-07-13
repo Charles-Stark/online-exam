@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Data
 @EnableConfigurationProperties
-@TableName(value = "objective_question1")
+@TableName(value = "course")
 @Component
 public class Course {
     private int id;
