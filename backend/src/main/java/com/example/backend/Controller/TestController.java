@@ -50,6 +50,21 @@ public class TestController {
 
     @PostMapping("update")
     ResultVo updateTest() {
+        /* 未完成 */
+        return null;
+    }
+
+
+    @PostMapping("/create")
+    ResultVo<Test> createTest() {
+        /* 未完成 */
+        return null;
+    }
+
+
+    @GetMapping("/delete/{testid}")
+    ResultVo deleteTest(@PathVariable String testid) {
+        /* 未完成 */
         return null;
     }
 }
