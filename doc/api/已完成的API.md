@@ -127,3 +127,47 @@ GET /api/v1/exam/all
 ### 返回数据结构
 
 由test数据表对应的Test类实例组成的列表
+
+## GET 删除考试
+
+GET /api/v1/exam/delete/{testid}
+
+根据testid删除考试
+
+### 请求参数
+
+| 名称          |位置| 类型      | 必选  | 说明                |
+|-------------|---|---------|-----|-------------------|
+| testid      |path| integer | 是  |    |
+
+> 返回示例
+
+> 成功
+
+```json
+{
+  "code": 0,
+  "msg": "删除考试成功",
+  "data": null
+}
+```
+
+> 异常
+
+```json
+{
+  "code": -1,
+  "msg": "删除考试失败",
+  "data": null
+}
+```
+
+### 返回结果
+
+|状态码|状态码含义|说明|数据模型|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+
+### 返回数据结构
+
+null

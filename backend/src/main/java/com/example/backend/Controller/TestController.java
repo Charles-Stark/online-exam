@@ -64,7 +64,13 @@ public class TestController {
 
     @GetMapping("/delete/{testid}")
     ResultVo deleteTest(@PathVariable String testid) {
-        /* 未完成 */
-        return null;
+
+        try {
+            testMapper.deleteById(testid);
+            return new ResultVo<>(0, "删除考试成功", null);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResultVo(-1, "删除考试失败", null);
+        }
     }
 }
