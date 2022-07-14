@@ -11,5 +11,9 @@ public interface TestService {
 
     Test getTestDetail(String testid);
 
+    void updateTest(Test test);
+
+    Test createTest(Test test);
+
     void deleteTest(String testid);
 }

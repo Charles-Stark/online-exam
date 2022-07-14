@@ -49,17 +49,29 @@ public class TestController {
     }
 
 
-    @PostMapping("update")
-    ResultVo updateTest() {
-        /* 未完成 */
-        return null;
+    @PostMapping("/update")
+    ResultVo updateTest(@RequestBody Test test) {
+
+        try {
+            testService.updateTest(test);
+            return new ResultVo<>(0, "修改考试成功", null);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResultVo<>(-1, "修改考试失败", null);
+        }
     }
 
 
     @PostMapping("/create")
-    ResultVo<Test> createTest() {
-        /* 未完成 */
-        return null;
+    ResultVo<Test> createTest(@RequestBody Test test) {
+
+        try {
+            testService.createTest(test);
+            return new ResultVo<>(0, "创建考试成功", test);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResultVo<>(-1, "创建考试失败", null);
+        }
     }
 
 

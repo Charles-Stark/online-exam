@@ -26,6 +26,17 @@ public class TestServiceImpl implements TestService {
     }
 
     @Override
+    public void updateTest(Test test) {
+        testMapper.updateById(test);
+    }
+
+    @Override
+    public Test createTest(Test test) {
+        testMapper.insert(test);
+        return test;
+    }
+
+    @Override
     public void deleteTest(String testid) {
         testMapper.deleteById(testid);
     }
