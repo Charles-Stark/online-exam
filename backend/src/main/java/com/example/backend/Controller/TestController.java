@@ -3,7 +3,6 @@ package com.example.backend.Controller;
 import com.example.backend.PO.Test;
 import com.example.backend.Service.impl.TestServiceImpl;
 import com.example.backend.Vo.ResultVo;
-import com.example.backend.mapper.TestMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

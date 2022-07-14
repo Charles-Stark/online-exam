@@ -1,5 +1,6 @@
 package com.example.backend.PO;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -16,6 +17,7 @@ public class Test {
     private String madedate;
     private int limitedtime;
     private long teacherid;
+    @TableId(value = "testid")
     private long testid;
     private long mader;
 }
