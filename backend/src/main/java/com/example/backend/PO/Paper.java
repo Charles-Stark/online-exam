@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Paper {
     private int id;
-    private Long testid;
+    private Long paperid;
     private String testlevel;
     private String testcourse;
     private String questionteacher;
