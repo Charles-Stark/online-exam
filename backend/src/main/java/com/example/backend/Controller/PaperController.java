@@ -66,7 +66,7 @@ public class PaperController {
     }
 
     @PostMapping("/generate")
-    ResultVo<Paper> generatePaper(@RequestBody ) {
+    ResultVo<Paper> generatePaper() {
         /* 未完成
         * 自动组卷 */
         return null;
