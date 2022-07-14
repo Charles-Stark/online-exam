@@ -1,6 +1,7 @@
 package com.example.backend.Controller;
 
 import com.example.backend.PO.Test;
+import com.example.backend.Service.impl.TestServiceImpl;
 import com.example.backend.Vo.ResultVo;
 import com.example.backend.mapper.TestMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import java.util.Map;
 public class TestController {
 
     @Autowired
-    private TestMapper testMapper;
+    private TestServiceImpl testService;
 
     @GetMapping("/all")
     ResultVo<List<Test>> getAllTest(@RequestParam(required = false) Map map) {
@@ -22,9 +23,9 @@ public class TestController {
         try {
             List testList;
             if (map != null) {
-                testList = testMapper.selectByMap(map);
+                testList = testService.getAllTest(map);
             } else {
-                testList = testMapper.selectList(null);
+                testList = testService.getAllTest(null);
             }
 
             return new ResultVo<>(0, "获取考试成功", testList);
@@ -39,7 +40,7 @@ public class TestController {
     ResultVo<Test> getTestDetail(@PathVariable String testid) {
 
         try {
-            Test test = testMapper.selectById(testid);
+            Test test = testService.getTestDetail(testid);
             return new ResultVo<>(0, "获取考试详情成功", test);
         } catch (Exception e) {
             e.printStackTrace();
@@ -66,7 +67,7 @@ public class TestController {
     ResultVo deleteTest(@PathVariable String testid) {
 
         try {
-            testMapper.deleteById(testid);
+            testService.deleteTest(testid);
             return new ResultVo<>(0, "删除考试成功", null);
         } catch (Exception e) {
             e.printStackTrace();
