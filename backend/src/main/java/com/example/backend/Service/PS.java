@@ -1,11 +1,10 @@
 package com.example.backend.Service;
 
-import com.example.backend.domain.Objective_question1;
-import com.example.backend.domain.Objective_question2;
+import com.example.backend.domain.ObjectiveQuestion1;
+import com.example.backend.domain.ObjectiveQuestion2;
 import com.example.backend.domain.Paper;
-import com.example.backend.domain.Subjective_question;
+import com.example.backend.domain.SubjectiveQuestion;
 import com.example.backend.mapper.Paper1mapper;
-import com.example.backend.util.PaperReader;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -16,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -27,55 +27,89 @@ public class PS {
     private String paperQuestion;
     private StringBuilder stringBuilder1,stringBuilder2;
     @Autowired
-    private List<Objective_question1> ob1List;
+    private List<ObjectiveQuestion1> ob1List;
     @Autowired
-    private List<Objective_question2> ob2List;
+    private List<ObjectiveQuestion2> ob2List;
     @Autowired
-    private List<Subjective_question> sbList;
+    private List<SubjectiveQuestion> sbList;
     private String questionType;
     /*
     * 显示所以符合要求的题目
     * */
-    public List<Objective_question1> showObjectiveQuestion1(String courseName) throws IOException {
+    public List<ObjectiveQuestion1> showObjectiveQuestion1(String courseName) throws IOException {
         OB1 ob1 = new OB1();
-        List<Objective_question1> list = ob1.showAllQuestion(courseName);
+        List<ObjectiveQuestion1> list = ob1.showAllQuestion(courseName);
         return list;
+
     }
-    public List<Objective_question2> showObjectiveQuestion2(String courseName) throws IOException {
+    public List<ObjectiveQuestion2> showObjectiveQuestion2(String courseName) throws IOException {
         OB2 ob2 = new OB2();
-        List<Objective_question2> list = ob2.showAllQuestion(courseName);
+        List<ObjectiveQuestion2> list = ob2.showAllQuestion(courseName);
         return list;
     }
-    public List<Subjective_question> showSubjectiveQuestion(String courseName) throws IOException {
+    public List<SubjectiveQuestion> showSubjectiveQuestion(String courseName) throws IOException {
         SQ sq = new SQ();
-        List<Subjective_question> list = sq.showAllQuestion(courseName);
+        List<SubjectiveQuestion> list = sq.showAllQuestion(courseName);
         return list;
     }
     /*
     * 显示已选择的题目
     * */
-    public List<Objective_question1> showSelectedObjectiveQuestion1(List<Long> questionId) throws IOException {
+    public List<ObjectiveQuestion1> showSelectedObjectiveQuestion1(List<Long> questionId) throws IOException {
         OB1 ob1=new OB1();
-        List<Objective_question1> list = ob1.showSelectedQuestion(questionId);
+        List<ObjectiveQuestion1> list = ob1.showSelectedQuestion(questionId);
         ob1List=list;
         return list;
     }
-    public List<Objective_question2> showSelectedObjectiveQuestion2(List<Long> questionId) throws IOException {
+    public List<ObjectiveQuestion2> showSelectedObjectiveQuestion2(List<Long> questionId) throws IOException {
         OB2 ob2=new OB2();
-        List<Objective_question2> list = ob2.showSelectedQuestion(questionId);
+        List<ObjectiveQuestion2> list = ob2.showSelectedQuestion(questionId);
         ob2List=list;
         return list;
     }
-    public List<Subjective_question> showSelectedSubjectiveQuestion(List<Long> questionId) throws IOException {
+    public List<SubjectiveQuestion> showSelectedSubjectiveQuestion(List<Long> questionId) throws IOException {
         SQ sq = new SQ();
-        List<Subjective_question> list = sq.showSelectedQuestion(questionId);
+        List<SubjectiveQuestion> list = sq.showSelectedQuestion(questionId);
         sbList=list;
         return list;
     }
+
     /*
     * 生成试卷
     * */
     public Paper toPaper(Long paperid, String testlevel, String testcourse, Long questionteacher){
+        for(int i=0;i<ob1List.toArray().length;i++){
+            stringBuilder1.append(ob1List.get(i));
+            if(i!=ob1List.toArray().length-1) stringBuilder1.append(",");
+            else {
+                stringBuilder1.append(";");
+                stringBuilder2.append("objective_question1");
+            }
+        }
+        for(int i=0;i<ob2List.toArray().length;i++){
+            stringBuilder1.append(ob2List.get(i));
+            if(i!=ob2List.toArray().length-1) stringBuilder1.append(",");
+            else {
+                stringBuilder1.append(";");
+                stringBuilder2.append(",objective_question2");
+            }
+        }
+        for(int i=0;i<sbList.toArray().length;i++){
+            stringBuilder1.append(sbList.get(i));
+            if(i!=sbList.toArray().length-1) stringBuilder1.append(",");
+            else {
+                stringBuilder1.append(";");
+                stringBuilder2.append(",subjective_question");
+            }
+        }
+        paperQuestion= stringBuilder1.toString();
+        questionType=stringBuilder2.toString();
+        //paper.getPaper(paperid,testlevel,testcourse,questionteacher,paperQuestion,questionType);
+        paper=new Paper(null,paperid,testlevel,testcourse,questionteacher,paperQuestion,questionType,null);
+        return paper;
+    }
+    public Paper toPaper(Integer paperId, String testlevel, String testcourse, Long questionteacher){
+        Long paperid =(long) paperId;
         for(int i=0;i<ob1List.toArray().length;i++){
             stringBuilder1.append(ob1List.get(i));
             if(i!=ob1List.toArray().length-1) stringBuilder1.append(",");
@@ -135,6 +169,17 @@ public class PS {
     * */
     public List<String> showPaper(Integer paperid) throws IOException {
         Long paperId=paperid.longValue();
+        InputStream is = Resources.getResourceAsStream("mybatis-config.xml");
+        SqlSessionFactoryBuilder sqlSessionFactoryBuilder=new SqlSessionFactoryBuilder();
+        SqlSessionFactory sqlSessionFactory =sqlSessionFactoryBuilder.build(is);
+        SqlSession sqlSession=sqlSessionFactory.openSession(true);
+
+        Paper1mapper paper1mapper = sqlSession.getMapper(Paper1mapper.class);
+        Paper paper1 = paper1mapper.selectPaperByPaperId(paperId);
+        PaperReader paperReader=new PaperReader();
+        return paperReader.read(paper1);
+    }
+    public List<String> showPaper(Long paperId) throws IOException {
         InputStream is = Resources.getResourceAsStream("mybatis-config.xml");
         SqlSessionFactoryBuilder sqlSessionFactoryBuilder=new SqlSessionFactoryBuilder();
         SqlSessionFactory sqlSessionFactory =sqlSessionFactoryBuilder.build(is);
