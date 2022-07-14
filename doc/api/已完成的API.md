@@ -171,3 +171,138 @@ GET /api/v1/exam/delete/{testid}
 ### 返回数据结构
 
 null
+
+## POST 修改考试
+
+POST /api/v1/exam/update
+
+根据testid修改考试
+
+> Body 请求参数
+
+```yaml
+id: int
+paperid: int
+course: string
+madedate: string
+limitedtime: int
+teacherid: int
+testid: int
+mader: int
+
+```
+
+### 请求参数
+
+| 名称            |位置|类型| 必选 |说明|
+|---------------|---|---|----|---|
+| body          |body|object| 否  |none|
+| » id          |body|integer| 否  |none|
+| » paperid     |body|integer| 否  |none|
+| » course      |body|string| 否  |none|
+| » madedate    |body|string| 否  |none|
+| » limitedtime |body|integer| 否  |none|
+| » teacherid   |body|integer| 否  |none|
+| » testid      |body|integer| 是  |none|
+| » mader       |body|integer| 否  |none|
+
+> 返回示例
+
+> 成功
+
+```json
+{
+  "code": 0,
+  "msg": "修改考试成功",
+  "data": null
+}
+```
+
+> 异常
+```json
+{
+  "code": -1,
+  "msg": "修改考试失败",
+  "data": null
+}
+```
+
+### 返回结果
+
+|状态码|状态码含义|说明|数据模型|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+
+### 返回数据结构
+null
+
+## POST 创建考试
+
+POST /api/v1/exam/create
+
+创建考试
+
+> Body 请求参数
+
+```yaml
+paperid: int
+course: string
+madedate: string
+limitedtime: int
+teacherid: int
+testid: int
+mader: int
+
+```
+
+### 请求参数
+
+| 名称            |位置|类型| 必选 |说明|
+|---------------|---|---|----|---|
+| body          |body|object| 是  |none|
+| » paperid     |body|integer| 是  |none|
+| » course      |body|string| 是  |none|
+| » madedate    |body|string| 是  |none|
+| » limitedtime |body|integer| 是  |none|
+| » teacherid   |body|integer| 是  |none|
+| » testid      |body|integer| 是  |none|
+| » mader       |body|integer| 是  |none|
+
+> 返回示例
+
+> 成功
+
+```json
+{
+  "code": 0,
+  "msg": "创建考试成功",
+  "data": {
+    "id": 1,
+    "paperid": 1,
+    "course": "数学",
+    "madedate": "2022-07-12 11:01:03",
+    "limitedtime": 60,
+    "teacherid": 12,
+    "testid": 1,
+    "mader": 1
+  }
+}
+```
+
+> 异常
+```json
+{
+  "code": -1,
+  "msg": "创建考试失败",
+  "data": null
+}
+```
+
+### 返回结果
+
+|状态码|状态码含义|说明|数据模型|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+
+### 返回数据结构
+test数据表对应的Test类
