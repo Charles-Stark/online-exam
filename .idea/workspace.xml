@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ba5c468-6825-421a-9a53-0ddd4e46cf62" name="变更" comment="Update API">
-      <change beforePath="$PROJECT_DIR$/doc/api/已完成的API.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/已完成的API.md" afterDir="false" />
-    </list>
+    <list default="true" id="6ba5c468-6825-421a-9a53-0ddd4e46cf62" name="变更" comment="Update API" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -141,7 +139,7 @@
       <workItem from="1657703766639" duration="5774000" />
       <workItem from="1657763895501" duration="1742000" />
       <workItem from="1657765649862" duration="2585000" />
-      <workItem from="1657768253828" duration="1020000" />
+      <workItem from="1657768253828" duration="1396000" />
     </task>
     <task id="LOCAL-00001" summary="Update POM.xml">
       <created>1657610603164</created>
@@ -360,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657768933359</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Update API">
+      <created>1657769547052</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1657769547052</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
