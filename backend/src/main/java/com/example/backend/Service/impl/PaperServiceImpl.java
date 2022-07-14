@@ -38,6 +38,11 @@ public class PaperServiceImpl implements PaperService {
     }
 
     @Override
+    public Paper generatePaper(Paper paper) {
+        return null;
+    }
+
+    @Override
     public void deletePaper(String paperid) {
         paperMapper.deleteById(paperid);
     }

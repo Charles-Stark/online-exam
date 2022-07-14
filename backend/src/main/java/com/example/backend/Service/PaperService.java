@@ -15,5 +15,7 @@ public interface PaperService {
 
     Paper createPaper(Paper paper);
 
+    Paper generatePaper(Paper paper);
+
     void deletePaper(String paperid);
 }
