@@ -4,10 +4,12 @@ import com.example.backend.PO.Paper;
 import com.example.backend.Service.PaperService;
 import com.example.backend.mapper.PaperMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
 
+@Service
 public class PaperServiceImpl implements PaperService {
 
     @Autowired
