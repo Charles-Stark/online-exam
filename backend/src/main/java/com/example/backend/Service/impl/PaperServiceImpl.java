@@ -16,26 +16,27 @@ public class PaperServiceImpl implements PaperService {
 
     @Override
     public List<Paper> getAllPaper(Map map) {
-        return null;
+        return paperMapper.selectByMap(map);
     }
 
     @Override
     public Paper getPaperDetail(String paperid) {
-        return null;
+        return paperMapper.selectById(paperid);
     }
 
     @Override
     public void updatePaper(Paper paper) {
-
+        paperMapper.updateById(paper);
     }
 
     @Override
     public Paper createPaper(Paper paper) {
-        return null;
+        paperMapper.insert(paper);
+        return paper;
     }
 
     @Override
     public void deletePaper(String paperid) {
-
+        paperMapper.deleteById(paperid);
     }
 }
