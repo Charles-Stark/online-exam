@@ -4,7 +4,7 @@
 
 暑期社会实践项目
 
-由Java Spring Boot + Vue开发的超简陋在线考试系统
+由Java Spring Boot + Vue开发的~~超简陋~~在线考试系统
 
 ## Introduction
 
